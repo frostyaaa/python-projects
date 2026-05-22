@@ -1,4 +1,6 @@
+# expense tracker CLI model
 
+# function to add expenses
 def add_expense():
     date = input("Enter date (YYYY-MM-DD): ")
     amount = float(input("Enter Amount: "))
@@ -11,10 +13,10 @@ def add_expense():
         "category": category,
         "description": description
     }
-
     expenses.append(expense)
     print("\nExpenses added succesfully.")
 
+# function to view expense
 def view_expense():
     if len(expenses)==0:
             print("\n No expenses found.")
@@ -27,6 +29,7 @@ def view_expense():
             print(f"Description: {expense['description']}")
             print("\n")
 
+#function to calculate expenses
 def total_expense():
     total_expense = 0
     for expense in expenses:
@@ -36,10 +39,9 @@ def total_expense():
 
 
 
-
 expenses = []
 
-print("\nWelcome to Expense Tracker")
+print("\n Welcome to Expense Tracker")
 
 while True:
     print("\n******MENU******")
